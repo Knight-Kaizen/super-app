@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./NewsApiComponent.module.css"
-import axios from "axios";
+
 
 export default
     function NewsApiComponent() {
@@ -39,8 +39,6 @@ export default
     React.useEffect(() => {
         if (ok) {
             let indx = 0;
-            // console.log(news.articles[0]);
-            // console.log(news.articles[0].urlToImage);
 
             setNewsImage(news.articles[indx].urlToImage);
             setNewsDescription(news.articles[indx].description);
