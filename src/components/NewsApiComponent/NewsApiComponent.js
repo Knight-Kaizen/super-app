@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./NewsApiComponent.module.css"
+import axios from "axios";
 
 export default
     function NewsApiComponent() {
 
-    const API_ENDPOINT = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e98f1f2be3a44b92ae736a01f0eb9e0f';
+    const API_ENDPOINT = 'https://saurav.tech/NewsAPI/top-headlines/category/health/in.json';
 
     const [news, setNews] = React.useState({});
     const [ok, setOk] = React.useState(false);  //News data received or not??
@@ -12,6 +13,7 @@ export default
     const [newsTitle, setNewsTitle] = React.useState('');
     const [newsDescription, setNewsDescription] = React.useState('');
 
+    
 
     const getNews = async () => {
         let response;
@@ -37,12 +39,17 @@ export default
     React.useEffect(() => {
         if (ok) {
             let indx = 0;
-            console.log(indx);
+            console.log(news.articles[0]);
+            // console.log(news.articles[0].urlToImage);
+
             setNewsImage(news.articles[indx].urlToImage);
             setNewsDescription(news.articles[indx].description);
             setNewsTitle(news.articles[indx].title);
         }
     }, [news])
+    
+        
+
     
 
     const date = new Date();

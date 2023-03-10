@@ -40,11 +40,11 @@ export default
     }, [])
 
     React.useEffect(() => {
-        console.log('checking');
+        // console.log('checking');
         if (dataFetched) {
-            console.log('Data received', weather);
+            // console.log('Data received', weather);
             setIcon(weather.currentConditions.icon);
-            console.log(weather.currentConditions.icon);
+            // console.log(weather.currentConditions.icon);
             setText(weather.currentConditions.conditions);
             setTemperature(weather.currentConditions.temp);
             setPressure(weather.currentConditions.pressure);

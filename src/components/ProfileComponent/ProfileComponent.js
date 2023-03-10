@@ -13,7 +13,7 @@ function ProfileComponent(){
         if(card.on == true)
         return card;
     })
-    console.log(display);
+    // console.log(display);
 
     const displayButtons = display.map((card) => {
         return (

@@ -80,8 +80,8 @@ export default
         
 
       }
-      console.log("timerRunning" , timerRunning);
-      console.log("alarm: ", alarm);
+      // console.log("timerRunning" , timerRunning);
+      // console.log("alarm: ", alarm);
       setTimerRunning(false);
       return <div className={styles.timerBox} 
       >00:00:00</div>;
@@ -204,7 +204,7 @@ export default
         <div className={styles.bottom}>
           <div className={styles.button}
             onClick={(e)=>{
-              console.log(time);
+              // console.log(time);
               setTimerRunning(true);
               
               
