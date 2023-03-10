@@ -4,8 +4,8 @@ import styles from "./WeatherApiComponent.module.css"
 
 export default
     function WeatherApiComponent() {
-    const API_ENDPOINT = 'http://api.weatherapi.com/v1/current.json?key=a31d9e2dc6a7438098114901230803&q=India&aqi=yes';
-
+    // const API_ENDPOINT = 'http://api.weatherapi.com/v1/current.json?key=a31d9e2dc6a7438098114901230803&q=India&aqi=yes';
+    const API_ENDPOINT = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Delhi?unitGroup=metric&include=current&key=9XXX9WC8LRTJHLHF5NK5RUEJF&contentType=json';
     const [weather, setWeather] = React.useState({});
     const [dataFetched, setDataFetched] = React.useState(false);
 
@@ -43,12 +43,13 @@ export default
         console.log('checking');
         if (dataFetched) {
             console.log('Data received', weather);
-            setIcon(weather.current.condition.icon);
-            setText(weather.current.condition.text);
-            setTemperature(weather.current.temp_c);
-            setPressure(weather.current.pressure_mb);
-            setWind(weather.current.wind_kph);
-            setHumidity(weather.current.humidity);
+            setIcon(weather.currentConditions.icon);
+            console.log(weather.currentConditions.icon);
+            setText(weather.currentConditions.conditions);
+            setTemperature(weather.currentConditions.temp);
+            setPressure(weather.currentConditions.pressure);
+            setWind(weather.currentConditions.windspeed);
+            setHumidity(weather.currentConditions.humidity);
         }
     }, [weather])
 
@@ -79,7 +80,7 @@ export default
             <div className={styles.bottom}>
                 <div className={styles.box1}>
                     <div className={styles.box1Top}>
-                        <img src={icon} className={styles.icon1}></img>
+                        <img src={`https://github.com/visualcrossing/WeatherIcons/blob/main/PNG/1st%20Set%20-%20Color/${icon}.png`} className={styles.icon1}></img>
                     </div>
                     <div className={styles.box1Bottom}>
                         <div className={styles.text1}>{text}</div>
