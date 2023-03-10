@@ -39,7 +39,7 @@ export default
     React.useEffect(() => {
         if (ok) {
             let indx = 0;
-            console.log(news.articles[0]);
+            // console.log(news.articles[0]);
             // console.log(news.articles[0].urlToImage);
 
             setNewsImage(news.articles[indx].urlToImage);
@@ -62,11 +62,12 @@ export default
     var amOrPm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12; 
     hours = hours ? hours : 12; 
-
+    const detail = `In the years since human beings first reached the summit of Mount Everest in 1953, climbing the world’s highest mountain has changed dramatically. Today, hundreds of mountaineers manage the feat each year thanks to improvements in knowledge, technology, and the significant......
+    `;
     return (
         <div className={styles.main}>
             <div className={styles.top}>
-                <img src={newsImage} className={styles.image1}></img>
+                <img src={ok ? newsImage : '../../Images/newsImage.png'} className={styles.image1}></img>
                 <div className={styles.text1}>
                     <h2 className={styles.text2}>{newsTitle}
                     </h2>
@@ -74,7 +75,9 @@ export default
                 </div>
             </div>
             <div className={styles.bottom}>
-                {newsDescription}
+                {ok ? newsDescription: 
+                    detail
+                }
             </div>
         </div>
     )

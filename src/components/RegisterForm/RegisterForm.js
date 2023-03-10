@@ -28,12 +28,12 @@ export default
     const navigate = useNavigate();
     function handleSubmit(event) {
         event.preventDefault();
-        console.log("final Form Data: ", formData)
+        // console.log("final Form Data: ", formData)
 
         //Perform Validation
 
         setErrors(validate(formData));
-        console.log(errors);
+        // console.log(errors);
         
     }
 

@@ -57,7 +57,7 @@ export default
     })
 
     function handleClick(id) {
-        console.log("clicked", id);
+        // console.log("clicked", id);
 
         setSelected((prevSelected) => {
             return (
@@ -77,11 +77,11 @@ export default
 
     React.useEffect(() => {
         if (displayButtons.length > 0) {
-            console.log("success");
+            // console.log("success");
             setCategorySelected(false);
         }
         else {
-            console.log("Select atleast 1");
+            // console.log("Select atleast 1");
             setCategorySelected(true);
         }
     }, [displayButtons])

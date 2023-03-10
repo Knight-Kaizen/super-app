@@ -80,7 +80,7 @@ export default
             <div className={styles.bottom}>
                 <div className={styles.box1}>
                     <div className={styles.box1Top}>
-                        <img src={`https://github.com/visualcrossing/WeatherIcons/blob/main/PNG/1st%20Set%20-%20Color/${icon}.png`} className={styles.icon1}></img>
+                        <img src={`../../Images/${icon}.png`} className={styles.icon1}></img>
                     </div>
                     <div className={styles.box1Bottom}>
                         <div className={styles.text1}>{text}</div>
