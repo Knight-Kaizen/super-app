@@ -1,0 +1,105 @@
+.main{
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.top{
+    height: 90%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+}
+.left{
+    height: 100%;
+    width: 70%;
+  
+
+    display: flex;
+    flex-direction: column;
+}
+.leftTop{
+    height: 60%;
+    width: 100%;
+
+
+    display: flex;
+    flex-direction: row;
+}
+.others{
+    height: 100%;
+    width: 60%;
+
+   
+
+    display: flex;
+    flex-direction: column;
+}
+.profile{
+    height: 50%;
+    width: 100%;
+
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather{
+    height: 50%;
+    width: 100%;
+
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notes{
+    height: 100%;
+    width: 40%;
+
+    color: White;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftBottom{
+    height: 40%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    height: 100%;
+    width: 30%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom{
+    height: 10%;
+    width: 100%;
+   
+    display: flex;
+    justify-content: right;
+    box-sizing: border-box;
+    padding-right: 2%;
+    align-items: center;
+}
+
+.button{
+    width: 10%;
+    height: 40%;
+    border-radius: 15px;
+    background-color:  #148A08;
+    color: white;
+}
